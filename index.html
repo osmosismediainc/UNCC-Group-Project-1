@@ -24,28 +24,71 @@
     <body>
         <!-- Materialize core JavaScript -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <nav> 
-            <div class="nav-wrapper"> 
-                <a href="#" class="brand-logo">&nbsp;Music Recognition App</a> 
-                <ul id="nav-mobile" class="right hide-on-med-and-down"> 
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">&nbsp;Music Recognition App</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
                         <a href="index.html">Application</a>
-                    </li>                     
+                    </li>
                     <li>
                         <a href="background.html">Background</a>
-                    </li>                     
+                    </li>
                     <li>
                         <a href="team.html">Team</a>
-                    </li>                     
-                </ul>                 
-            </div>             
+                    </li>
+                    <li>
+                        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Instructions</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div class="container">
             <div class="row">
                 <div class="col s12 m12 l12 center-align">
-                    <h3>Welcome To Our App</h3> 
-                    <p>Use the button below to launch the Music App</p>
-                    <a class="btn">Launch</a>
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <h4>How To Use Our App</h4>
+                            <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                            dolor auctor. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus
+                            porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna
+                            mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis,
+                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
+                            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                            sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's Go!</a>
+                        </div>
+                    </div>
+                    <h3>Welcome To Our App</h3>
+                    <p>To get started, add some lyrics to the text box below</p>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!--If not used prefix class the icon overflow the textarea-->
+                            <i class="material-icons prefix">audiotrack</i>
+                            <textarea id="lyricsInput" class="materialize-textarea"></textarea>
+                            <label for="lyricsInput">Add Lyrics Here</label>
+                            <input type="submit" class="btn waves-effect waves-light" id="lyricsInputSubmit" value="Search Lyrics"/>
+                        </div>
+                    </div>                     
+                    <div class="row results" id="searchResultsDiv">
+                        <h4>Results List Will Go Here</h4>
+                    </div>                     
+                    <div class="row music" id="musicResults">
+                        <h4>The Music</h4>
+                        <hr/>
+                        <div class="col s12 m6"> 
+                            <h3>Column title</h3> 
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                        </div>
+                        <div class="col s12 m6"> 
+                            <h3>Column title</h3> 
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                        </div>
+                    </div>                     
                 </div>
             </div>
         </div>
