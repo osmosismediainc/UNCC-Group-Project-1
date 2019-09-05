@@ -3,7 +3,7 @@
 var dothraki = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://dothraki.p.rapidapi.com/dothraki.json?text=Have%20you%20seen%20my%20lady%E2%80%99s%20dragon%3F",
+	"url": "https://dothraki.p.rapidapi.com/dothraki.json?",
 	"method": "POST",
 	"headers": {
 		"x-rapidapi-host": "dothraki.p.rapidapi.com",
@@ -12,7 +12,7 @@ var dothraki = {
 	},
 	"data": {}
 }
-​
+
 $.ajax(dothraki).done(function (response) {
 	console.log(response);
 });
@@ -33,7 +33,7 @@ var yoda = {
 	},
 	"data": {}
 }
-​
+
 $.ajax(yoda).done(function (response) {
 	console.log(response);
 });
@@ -44,7 +44,7 @@ console.log(yoda);
 var sElvish = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://elvish.p.rapidapi.com/sindarin.json?text=The%20world%20is%20changed%3B%20I%20can%20feel%20it%20in%20the%20water%2C%20I%20can%20feel%20it%20in%20the%20earth%2C%20I%20can%20smell%20it%20in%20the%20air.",
+	"url": "https://elvish.p.rapidapi.com/sindarin.json?",
 	"method": "POST",
 	"headers": {
 		"x-rapidapi-host": "elvish.p.rapidapi.com",
@@ -53,7 +53,7 @@ var sElvish = {
 	},
 	"data": {}
 }
-​
+
 $.ajax(sElvish).done(function (response) {
 	console.log(response);
 });
