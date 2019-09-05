@@ -17,6 +17,8 @@ $.ajax(dothraki).done(function (response) {
 	console.log(response);
 });
 
+console.log(dothraki);
+
 
 // Yoda Translator AJAX Call
 var yoda = {
@@ -36,6 +38,7 @@ $.ajax(yoda).done(function (response) {
 	console.log(response);
 });
 
+console.log(yoda);
 
 // Sindarin Translator AJAX call
 var sElvish = {
@@ -54,6 +57,8 @@ var sElvish = {
 $.ajax(sElvish).done(function (response) {
 	console.log(response);
 });
+
+console.log(sElvish);
 
 
 // Quenya Translator AJAX call
@@ -74,6 +79,7 @@ $.ajax(qElvish).done(function (response) {
     console.log(response);
 });
 
+console.log(qElvish);
 
 // Valley Girl Translator AJAX call
 var valleyGirl = {
@@ -92,3 +98,5 @@ var valleyGirl = {
 $.ajax(valleyGirl).done(function (response) {
     console.log(response);
 });
+
+console.log(valleyGirl);
