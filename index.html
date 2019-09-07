@@ -1,128 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body>
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="">
-            <meta name="author" content="">
-            <!--jQuery Script-->
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-            <title>Our Music App - UNCC</title>
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <!-- Materialize core CSS -->
-            <link href="materialize/css/materialize.css" rel="stylesheet">
-            <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-            <link href="assets/css/style.css" rel="stylesheet">
-        </head>
-  <!-- Modal Structure -->
-  
+
+<body>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Our Music App - UNCC</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Materialize core CSS -->
+        <link href="materialize/css/materialize.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <!-- Modal Structure -->
+
     </div>
-  </div>
-        <nav> 
-            <div class="nav-wrapper"> 
-                <a href="index.html" class="brand-logo">&nbsp;Music Recognition App</a> 
-                <ul id="nav-mobile" class="right hide-on-med-and-down"> 
-                    <li class="active">
-                        <a href="index.html">Application</a>
-                    </li>                     
-                    <li>
-                        <a href="background.html">Background</a>
-                    </li>                     
-                    <li>
-                        <a href="team.html">Team</a>
-                    </li>   
-                              <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Instructions</a>                  
-                </ul>                 
-            </div>  
-            </nav>
-        <div class="container">
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <h4>How To Use Our App</h4>
-                    <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                            dolor auctor. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus
-                            porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna
-                            mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
-                            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                            sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's Go!</a>
-                </div>
+    </div>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">&nbsp;Music Recognition App</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active">
+                    <a href="index.html">Application</a>
+                </li>
+                <li>
+                    <a href="background.html">Background</a>
+                </li>
+                <li>
+                    <a href="team.html">Team</a>
+                </li>
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Instructions</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>How To Use Our App</h4>
+                <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                    dolor auctor. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus
+                    porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna
+                    mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis,
+                    est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                    sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="row">
-                <!-- Access the Microphone and -->
-                <audio id="player" controls></audio>
-                <script>
-                  const player = document.getElementById('player');
-                
-                  const handleSuccess = function(stream) {
-                    if (window.URL) {
-                      player.srcObject = stream;
-                    } else {
-                      player.src = stream;
-                    }
-                  };
-                
-                  navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-                      .then(handleSuccess);
-                </script>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's Go!</a>
             </div>
-            <div class="row">
-                <div class="row results" id="searchResultsDiv">
-                    <h4>Results List Will Go Here</h4>
-                </div>                 
-                <div class="row music" id="musicResults">
-                    <h4>The Music</h4>
-                    <hr/>
-                    <div class="col s12 m6"> 
-                        <h3>Column title</h3> 
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+        </div>
+        <!-- Capture and save audio from microphone -->
+        <div class="row musicGrabber" id="getThatFunkyMusic">
+                <h2>Record</h2>
+                <audio controls id="audio"></audio>
+            <div>
+              <a class="button recordButton" id="record">Record</a>
+              <a class="button recordButton" id="recordFor5">Record For 5 Seconds</a>
+              <a class="button disabled one" id="pause">Pause</a>
+              <a class="button disabled one" id="stop">Reset</a>
+            </div><br/>
+            <div>
+              <input class="button" type="checkbox" id="live"/>
+              <label for="live">Live Output</label>
+            </div>
+                <div data-type="wav">
+                    <p>WAV Controls:</p>
+                    <a class="button disabled one" id="play">Play</a>
+                    <a class="button disabled one" id="download">Download</a>
+              <a class="button disabled one" id="base64">Base64 URL</a>
+              <a class="button disabled one" id="save">Upload to Server</a>
+                </div>
+            <div data-type="mp3">
+              <p>MP3 Controls:</p>
+              <a class="button disabled one" id="play">Play</a>
+              <a class="button disabled one" id="download">Download</a>
+              <a class="button disabled one" id="base64">Base64 URL</a>
+              <a class="button disabled one" id="save">Upload to Server</a>
+            </div>
+            <canvas id="level" height="200" width="500"></canvas>
+                <style>
+                .button{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0px 5px;
+                    padding: 5px 12px;
+                    cursor: pointer;
+                    outline: none;
+                    font-size: 13px;
+                    text-decoration: none !important;
+                    text-align: center;
+                    color:#fff;
+                    background-color: #4D90FE;
+                    background-image: linear-gradient(top,#4D90FE, #4787ED);
+                    background-image: -ms-linear-gradient(top,#4D90FE, #4787ED);
+                    background-image: -o-linear-gradient(top,#4D90FE, #4787ED);
+                    background-image: linear-gradient(top,#4D90FE, #4787ED);
+                    border: 1px solid #4787ED;
+                    box-shadow: 0 1px 3px #BFBFBF;
+                }
+                a.button{
+                    color: #fff;
+                }
+                .button:hover{
+                    box-shadow: inset 0px 1px 1px #8C8C8C;
+                }
+                .button.disabled{
+                    box-shadow:none;
+                    opacity:0.7;
+                }
+            canvas{
+              display: block;
+            }
+                </style>
+            <!-- End Capture Audio -->
+        </div>
+        <div class="row">
+            <div class="row results" id="searchResultsDiv">
+                <h4>Results List Will Go Here</h4>
+            </div>
+            <div class="row music" id="musicResults">
+                <h4>The Music</h4>
+                <hr />
+                <div class="col s12 m6">
+                    <h3>Column title</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
+                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+                <div class="col s12 m6">
+                    <h3>Column title</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
+                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+                <div class="row" id="audioCapture">
+                    <p>Audio Capture Here</p>
+                </div>
+                <div class="row music" id="musicInfoHolder">
+                    <h4 id="song">Song Title</h4>
+                    <hr />
+                    <div class="col s12 m6">
+                        <h5 id="artist">Artist</h5>
+                        <h5 id="album">Album</h5>
+                        <p id="lyrics">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est
+                            non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id
+                            dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit
+                            amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                            fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum
+                            at eros.</p>
+                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus,
+                            nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac
+                            facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Nulla vitae
+                            elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis
+                            euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                            fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Aenean lacinia
+                            bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Vivamus sagittis lacus
+                            vel augue laoreet rutrum faucibus dolor auctor.</p>
+                        <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
+                            dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Praesent
+                            commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo.
+                            Vestibulum id ligula porta felis euismod semper.</p>
                     </div>
-                    <div class="col s12 m6"> 
-                        <h3>Column title</h3> 
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                    <div class="col s12 m6">
+                        <img id="albumArt" class="materialboxed" width="350"
+                            src="https://via.placeholder.com/350x350?text=Album+Art">
                     </div>
-                    <div class="row" id="audioCapture"><p>Audio Capture Here</p></div>                     
-                    <div class="row music" id="musicInfoHolder">
-                        <h4 id="song">Song Title</h4>
-                        <hr/>
-                        <div class="col s12 m6"> 
-                            <h5 id="artist">Artist</h5>
-                            <h5 id="album">Album</h5>
-                            <p id="lyrics">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p> <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p><p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</p> 
-                        </div>
-                        <div class="col s12 m6"> 
-                            <img id="albumArt" class="materialboxed" width="350" src="https://via.placeholder.com/350x350?text=Album+Art">
-                        </div>
-                    </div>                     
                 </div>
             </div>
         </div>
-        <footer class="page-footer"> 
-            <div class="container"> 
-                <div class="row"> 
-                    <div class="col l6 s12"> 
-                        <h5 class="white-text">Team Beastmaster</h5> 
-                        <p class="grey-text text-lighten-4">A UNCC Bootcamp Joint</p> 
-                    </div>                     
-                </div>                 
-            </div>             
-            <div class="footer-copyright"> 
-                <div class="container">© 2019 Copyright Beastmaster
-</div>                 
-            </div>             
-        </footer>
-        <script src="assets/musicapp.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script src="materialize/js/materialize.js"></script>
-        <script src="assets/js/index.js"></script>
-        <script src="assets/js/ajaxTranslator.js"></script>
-        <script src="assets/musicapp.js"></script>
-    </body>
+    </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Team Beastmaster</h5>
+                    <p class="grey-text text-lighten-4">A UNCC Bootcamp Joint</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">© 2019 Copyright Beastmaster
+            </div>
+        </div>
+    </footer>
+   <!-- <script src="assets/musicapp.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="materialize/js/materialize.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/ajaxTranslator.js"></script>
+    <script src="assets/js/recorder.js"></script>
+		<script src="assets/js/Fr.voice.js"></script>
+		<script src="assets/js/recorderApp.js"></script>
+</body>
+
 </html>
