@@ -7,7 +7,7 @@
 // 	"method": "POST",
 // 	"headers": {
 // 		"x-rapidapi-host": "dothraki.p.rapidapi.com",
-// 		"x-rapidapi-key": "5da9678411msh0bf02b451454513p111fc5jsn1344d0dc18f3",
+// 		"x-rapidapi-key": "18cca24e93msh09585cce8c4621fp1fe3ddjsn689522057af1",
 // 		"content-type": "application/x-www-form-urlencoded"
 // 	},
 // 	"data": {}
@@ -28,7 +28,7 @@
 // 	"method": "POST",
 // 	"headers": {
 // 		"x-rapidapi-host": "yodish.p.rapidapi.com",
-// 		"x-rapidapi-key": "5da9678411msh0bf02b451454513p111fc5jsn1344d0dc18f3",
+// 		"x-rapidapi-key":"18cca24e93msh09585cce8c4621fp1fe3ddjsn689522057af1",
 // 		"content-type": "application/x-www-form-urlencoded"
 // 	},
 // 	"data": {}
@@ -39,47 +39,47 @@
 // });
 
 // console.log(yoda);
-
-// // Sindarin Translator AJAX call
-// var sElvish = {
+ 
+// Sindarin Translator AJAX call
+//  var sElvish = {
 // 	"async": true,
 // 	"crossDomain": true,
-// 	"url": "https://elvish.p.rapidapi.com/sindarin.json?",
+// 	"url": "https://elvish.p.rapidapi.com/sindarin.json?text=The%20world%20is%20changed%3B%20I%20can%20feel%20it%20in%20the%20water%2C%20I%20can%20feel%20it%20in%20the%20earth%2C%20I%20can%20smell%20it%20in%20the%20air.",
 // 	"method": "POST",
 // 	"headers": {
 // 		"x-rapidapi-host": "elvish.p.rapidapi.com",
-// 		"x-rapidapi-key": "18cca24e93msh09585cce8c4621fp1fe3ddjsn689522057af1",
+// 		"x-rapidapi-key": "5da9678411msh0bf02b451454513p111fc5jsn1344d0dc18f3",
 // 		"content-type": "application/x-www-form-urlencoded"
 // 	},
 // 	"data": {}
 // }
-
-// $.ajax(sElvish).done(function (response) {
+// $.ajax(settings).done(function (response) {
 // 	console.log(response);
 // });
 
-// console.log(sElvish);
+// console.log(sElvish)
 
 
-// Quenya Translator AJAX call
-//var qElvish = {
-   // "async": true,
-    //"crossDomain": true,
-    //"url": "https://elvish.p.rapidapi.com/quenya.json?text=I%20am%20Arwen%20-%20I've%20come%20to%20help%20you.%20Hear%20my%20voice...%20Come%20back%20to%20the%20light.",
-    //"method": "POST",
-    //"headers": {
-   //     "x-rapidapi-host": "elvish.p.rapidapi.com",
-   //     "x-rapidapi-key": "18cca24e93msh09585cce8c4621fp1fe3ddjsn689522057af1",
-   //     "content-type": "application/x-www-form-urlencoded"
-   // },
-   // "data": {}
-//}
+// // Quenya Translator AJAX call
+// var qElvish = {
+// 	"async": true,
+// 	"crossDomain": true,
+// 	"url": "https://elvish.p.rapidapi.com/quenya.json?text=I%20am%20Arwen%20-%20I've%20come%20to%20help%20you.%20Hear%20my%20voice...%20Come%20back%20to%20the%20light.",
+// 	"method": "POST",
+// 	"headers": {
+// 		"x-rapidapi-host": "elvish.p.rapidapi.com",
+// 		"x-rapidapi-key": "5da9678411msh0bf02b451454513p111fc5jsn1344d0dc18f3",
+// 		"content-type": "application/x-www-form-urlencoded"
+// 	},
+// 	"data": {}
+// }
+// ​
+// $.ajax(settings).done(function (response) {
+// 	console.log(response);
+// });
 
-//$.ajax(qElvish).done(function (response) {
-    //console.log(response);
-//});
 
-//console.log(qElvish);
+// console.log(qElvish);
 
 // Valley Girl Translator AJAX call
 // var valleyGirl = {
