@@ -4,7 +4,7 @@ $(document).ready(function () {
     
 
     function searchMusic(lyrics) {
-        var queryURL = "https://api.audd.io/findLyrics/?q=" + lyrics + "&apikey=af514938d5msha11b1d9e2c8a7fcp14c174jsn02b30455c6eb&limit=10";
+        var queryURL = "https://api.audd.io/findLyrics/?q=" + lyrics + "&apikey=657b96c98dmshf4175a8669455e1p1adb3ejsn2f2bdc5d5eed&limit=10";
 
         var lyrics = ""
 
