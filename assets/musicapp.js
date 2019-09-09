@@ -1,24 +1,26 @@
 $(document).ready(function () {
     console.log("yooooo");
 
+    
 
-    function searchMusic(artist) {
-        var queryURL = "https://api.audd.io/findLyrics/?q=" + "&apikey=af514938d5msha11b1d9e2c8a7fcp14c174jsn02b30455c6eb";
+    function searchMusic(lyrics) {
+        var queryURL = "https://api.audd.io/findLyrics/?q=" + lyrics + "&apikey=af514938d5msha11b1d9e2c8a7fcp14c174jsn02b30455c6eb&limit=10";
+
+        var lyrics = ""
 
         $.ajax({
             url: queryURL,
-            method: "POST"
+            method: "GET"
         }).then(function (response) {
 
             // Printing the entire object to console
             console.log(response);
 
             // Constructing HTML containing the artist information
-            var artistName = $("<h1>").text(response.name);
-            var artistLyrics = $("<p>").text(response.lyrics);
-            var artistTitle = $("<p>").attr("src", response.title);
-            var artistAlbum = $("<h1>").attr("src", response.album);
-            var artistArtwork = $("<img>").attr("src", response.artwork);
+            var artistName = $("#artist").text(response.name);
+            var artistLyrics = $("#lyrics").text(response.lyrics);
+            var artistAlbum = $("#album").attr(response.album);
+            var artistArtwork = $("#albumArt").attr("src", response.artwork);
 
 
             // Empty the contents of the artist-div, append the new artist content
@@ -32,25 +34,12 @@ $(document).ready(function () {
         event.preventDefault();
         console.log(event)
         // Storing the artist name
-        var inputArtist = $("#musicInfoHolder").val().trim();
+        var inputLyrics = $("#musicInfoHolder").val().trim();
         console.log(event)
 
         // Running the searchBandsInTown function(passing in the artist as an argument)
-        searchMusic(inputArtist);
+        searchMusic(inputLyrics);
 
-        var form = document.getElementById('musicFileInput');
-        form.onsubmit = function () {
-            var formData = new FormData(form);
-
-            formData.append('file', file);
-
-            var xhr = new XMLHttpRequest();
-            // Add any event handlers here...
-            xhr.open('POST', form.getAttribute('action'), true);
-            xhr.send(formData);
-
-            return false; // To avoid actual submission of the form
-        }
 
     })
 })
