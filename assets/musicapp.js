@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $( document ).ready(function () {
     console.log( "yooooo" );
 
@@ -53,10 +52,6 @@ $("#submit").on("click", function (event) {
 
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBands(inputArtist);
-=======
-$(document).ready(function () {
-    console.log("yooooo");
->>>>>>> c2c673bad067fb91073c9e86f546bc03d846c976
 
 
     function searchMusic(artist) {
