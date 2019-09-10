@@ -53,7 +53,7 @@ $("#musicFileSubmit").on("click", function (event) {
 
             // Constructing HTML containing the artist information
             var artistName = $("<h1>").text(response.name);
-            var artistLyrics = $("<p>").text(response.lyrics);
+            artistLyrics = $("<p>").text(response.lyrics);
             var artistTitle = $("<p>").attr("src", response.title);
             var artistAlbum = $("<h1>").attr("src", response.album);
             var artistArtwork = $("<img>").attr("src", response.artwork);
