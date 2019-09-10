@@ -1,3 +1,27 @@
+// Yoda Translator AJAX Call
+
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://yodish.p.rapidapi.com/yoda.json?text=" + artistLyrics +  ".",
+	"method": "POST",
+	"headers": {
+		"x-rapidapi-host": "yodish.p.rapidapi.com",
+		"x-rapidapi-key": "5da9678411msh0bf02b451454513p111fc5jsn1344d0dc18f3",
+		"content-type": "application/x-www-form-urlencoded"
+	},
+	"data": {}
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+    console.log("Artist lyrics: " + artistLyrics)
+    var replaced = artistLyrics.replace(" ", "%20"); // add 20% in search spaces
+    console.log(replaced);
+});
+
+
+// languages below are opions to be ued if anything happens to yoda
 
 // //Dothraki Translator AJAX call
 // var dothraki = {
@@ -19,20 +43,6 @@
 
 // console.log(dothraki);
 
-
-// Yoda Translator AJAX Call
-// var yoda = {
-// 	"async": true,
-// 	"crossDomain": true,
-// 	"url": "https://yodish.p.rapidapi.com/yoda.json?text=Master%20Obiwan%20has%20lost%20a%20planet.",
-// 	"method": "POST",
-// 	"headers": {
-// 		"x-rapidapi-host": "yodish.p.rapidapi.com",
-// 		"x-rapidapi-key": "5da9678411msh0bf02b451454513p111fc5jsn1344d0dc18f3",
-// 		"content-type": "application/x-www-form-urlencoded"
-// 	},
-// 	"data": {}
-// }
 
 // $.ajax(yoda).done(function (response) {
 // 	console.log(response);
