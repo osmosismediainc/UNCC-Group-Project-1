@@ -9,14 +9,6 @@
     <title>Project One</title>
     <meta name="description" content="">
     <meta name="author" content="">
-    <!--jQuery Script-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-152x152.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-    <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32">
     <title>Our Music App - UNCC</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize core CSS -->
@@ -62,160 +54,27 @@
               </div>
         <div class="row">
             <div class="row music" id="musicResults">
-                    <!--<div class="row" id="playTHATFunkyMusic">
-                            <h4>Record</h4>
-                            <hr />
-                                        <audio controls class="hide" id="audio"></audio>
-                                    <div>
-                                        <p>Record Audio:</p>
-                                      <a class="button recordButton" id="record">Record</a>
-                                      <a class="button recordButton hide" id="recordFor5">Record For 5 Seconds</a>
-                                      <a class="button disabled one" id="pause">Pause</a>
-                                      <a class="button disabled one" id="stop">Reset</a>
-                                    </div><br/>
-                                    <div class="hide">
-                                      <input class="button" type="checkbox" id="live"/>
-                                      <label for="live">Live Output</label>
-                                    </div>
-                                        <div data-type="wav">
-                                            <p>File Save:</p>
-                                            <a class="button disabled one hide" id="play">Play</a>
-                                            <a class="button disabled one" id="download">Stop and Download</a>
-                                      <a class="button disabled one hide" id="base64">Base64 URL</a>
-                                      <a class="button disabled one hide" id="save">Upload to Server</a>
-                                        </div>
-                                    <div data-type="mp3" class="hide">
-                                      <p>MP3 Controls:</p>
-                                      <a class="button disabled one" id="play">Play</a>
-                                      <a class="button disabled one" id="download">Download</a>
-                                      <a class="button disabled one" id="base64">Base64 URL</a>
-                                      <a class="button disabled one" id="save">Upload to Server</a>
-                                    </div>
-                                    <canvas id="level" height="200" width="500"></canvas>
-                                        <style>
-                                        .button{
-                                            display: inline-block;
-                                            vertical-align: middle;
-                                            margin: 0px 5px;
-                                            padding: 5px 12px;
-                                            cursor: pointer;
-                                            outline: none;
-                                            font-size: 13px;
-                                            text-decoration: none !important;
-                                            text-align: center;
-                                            color:#fff;
-                                            background-color: #4D90FE;
-                                            background-image: linear-gradient(top,#4D90FE, #4787ED);
-                                            background-image: -ms-linear-gradient(top,#4D90FE, #4787ED);
-                                            background-image: -o-linear-gradient(top,#4D90FE, #4787ED);
-                                            background-image: linear-gradient(top,#4D90FE, #4787ED);
-                                            border: 1px solid #4787ED;
-                                            box-shadow: 0 1px 3px #BFBFBF;
-                                        }
-                                        a.button{
-                                            color: #fff;
-                                        }
-                                        .button:hover{
-                                            box-shadow: inset 0px 1px 1px #8C8C8C;
-                                        }
-                                        .button.disabled{
-                                            box-shadow:none;
-                                            opacity:0.7;
-                                        }
-                                    canvas{
-                                      display: block;
-                                    }
-                                        </style>
-                     <p><small>Francium Voice - Created By <a href='http://subinsb.com'>Subin Siby</a> & Open Source community</small></p>
-        
-                    </div>-->
-                    <div class="row upload" id="upload">
-                            <h4 id="song">Search By Lyrics</h4>
-                            <hr />
-                            <form action="#">
-                                    <div class="row">
-                                            <form class="col s12">
-                                              <div class="row">
-                                                <div class="input-field col s12">
-                                                  <textarea id="lyricSearch" class="materialize-textarea"></textarea>
-                                                  <label for="lyricSearch">Lyric Search</label>
-                                                </div>
-                                              </div>
-                                            </form>
-                                          </div>
-                                    <button class="btn waves-effect waves-light" type="submit" name="action" id="musicFileSubmit">Submit
-                                            <i class="material-icons right">audiotrack</i>
-                                          </button>
-                                  </form>
-                    </div>
-                    <div data-type="mp3" class="hide">
-                        <p>MP3 Controls:</p>
-                        <a class="button disabled one" id="play">Play</a>
-                        <a class="button disabled one" id="download">Download</a>
-                        <a class="button disabled one" id="base64">Base64 URL</a>
-                        <a class="button disabled one" id="save">Upload to Server</a>
-                    </div>
-                    <canvas id="level" height="200" width="500"></canvas>
-                    <style>
-                        .button {
-                            display: inline-block;
-                            vertical-align: middle;
-                            margin: 0px 5px;
-                            padding: 5px 12px;
-                            cursor: pointer;
-                            outline: none;
-                            font-size: 13px;
-                            text-decoration: none !important;
-                            text-align: center;
-                            color: #fff;
-                            background-color: #4D90FE;
-                            background-image: linear-gradient(top, #4D90FE, #4787ED);
-                            background-image: -ms-linear-gradient(top, #4D90FE, #4787ED);
-                            background-image: -o-linear-gradient(top, #4D90FE, #4787ED);
-                            background-image: linear-gradient(top, #4D90FE, #4787ED);
-                            border: 1px solid #4787ED;
-                            box-shadow: 0 1px 3px #BFBFBF;
-                        }
-
-                        a.button {
-                            color: #fff;
-                        }
-
-                        .button:hover {
-                            box-shadow: inset 0px 1px 1px #8C8C8C;
-                        }
-
-                        .button.disabled {
-                            box-shadow: none;
-                            opacity: 0.7;
-                        }
-
-                        canvas {
-                            display: block;
-                        }
-                    </style>
-                    <p><small>Francium Voice - Created By <a href='http://subinsb.com'>Subin Siby</a> & Open Source
-                            community</small></p>
-
-                </div>
                 <div class="row upload" id="upload">
-                    <h4 id="song">Upload Recorded File</h4>
+                    <h4 id="song">Search By Lyrics</h4>
                     <hr />
                     <form action="#">
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>File</span>
-                                <input id="musicFileInput" type="file" accept=".wav,.mp3">
-                            </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
-                            </div>
-                        </div>
-                        <button class="btn waves-effect waves-light" type="submit" name="action"
-                            id="musicFileSubmit">Submit
-                            <i class="material-icons right">audiotrack</i>
-                        </button>
-                    </form>
+                            <div class="row">
+                                    <form class="col s12">
+                                      <div class="row">
+                                        <div class="input-field col s12">
+                                          <textarea id="lyricSearch" class="materialize-textarea"></textarea>
+                                          <label for="lyricSearch">Lyric Search</label>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                            <button class="btn waves-effect waves-light" type="submit" name="action" id="musicFileSubmit">Submit
+                                    <i class="material-icons right">audiotrack</i>
+                                  </button>
+                          </form>
+            </div>
+        </div>
+                
                 </div>
                 <br />
                 <div class="row music" id="musicInfoHolder">
@@ -264,10 +123,6 @@
     <script src="assets/js/index.js"></script>
     <script src="assets/js/ajaxTranslator.js"></script>
     <script src="assets/musicapp.js"></script>
-    <script src="assets/js/recorder.js"></script>
-    <script src="assets/js/Fr.voice.js"></script>
-    <script src="assets/js/recorderApp.js"></script>
-    <script src="assets/js/rlibmp3lame.min.js"></script>
 </body>
 
 </html>
