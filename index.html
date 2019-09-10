@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 </html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project One</title>
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!--jQuery Script-->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <!-- Favicons-->
-        <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-152x152.png">
-        <meta name="msapplication-TileColor" content="#FFFFFF">
-        <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-        <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32">
-        <title>Our Music App - UNCC</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- Materialize core CSS -->
-        <link href="materialize/css/materialize.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <link href="assets/css/style.css" rel="stylesheet">
-    </head>
-    <body>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--jQuery Script-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32">
+    <title>Our Music App - UNCC</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize core CSS -->
+    <link href="materialize/css/materialize.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
     <!-- Modal Structure -->
     <nav>
         <div class="nav-wrapper">
@@ -37,23 +40,26 @@
                 <li>
                     <a href="team.html">Team</a>
                 </li>
-                <!-- Modal Trigger -->
-                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Instructions</a>
             </ul>
         </div>
     </nav>
     <div class="container">
+            <div class="row marginTop">
+                    <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Instructions</a>
+      
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>How To Use Our App</h4>
-                <p>Welcome to Music App! Having trouble figuring out that song stuck in your head? Can you sing a little bit of it? If not, how about humming? You're at the right site!</p>
-                <p>To start, simply press record and hum or sing the song that's been driving you crazy. Save the recording, upload it to Music App and BOOM! Sanity restored</p> 
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's Go!</a>
-            </div>
+          <div class="modal-content">
+            <h4>Lyric Search Instructions</h4>
+            <p>Add your lyrics search to the text box. Audd.io will show you the song your lyrics relate to.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's Do It!</a>
+          </div>
         </div>
+                
+              </div>
         <div class="row">
             <div class="row music" id="musicResults">
                     <!--<div class="row" id="playTHATFunkyMusic">
@@ -142,7 +148,76 @@
                                           </button>
                                   </form>
                     </div>
-                    <br />
+                    <div data-type="mp3" class="hide">
+                        <p>MP3 Controls:</p>
+                        <a class="button disabled one" id="play">Play</a>
+                        <a class="button disabled one" id="download">Download</a>
+                        <a class="button disabled one" id="base64">Base64 URL</a>
+                        <a class="button disabled one" id="save">Upload to Server</a>
+                    </div>
+                    <canvas id="level" height="200" width="500"></canvas>
+                    <style>
+                        .button {
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin: 0px 5px;
+                            padding: 5px 12px;
+                            cursor: pointer;
+                            outline: none;
+                            font-size: 13px;
+                            text-decoration: none !important;
+                            text-align: center;
+                            color: #fff;
+                            background-color: #4D90FE;
+                            background-image: linear-gradient(top, #4D90FE, #4787ED);
+                            background-image: -ms-linear-gradient(top, #4D90FE, #4787ED);
+                            background-image: -o-linear-gradient(top, #4D90FE, #4787ED);
+                            background-image: linear-gradient(top, #4D90FE, #4787ED);
+                            border: 1px solid #4787ED;
+                            box-shadow: 0 1px 3px #BFBFBF;
+                        }
+
+                        a.button {
+                            color: #fff;
+                        }
+
+                        .button:hover {
+                            box-shadow: inset 0px 1px 1px #8C8C8C;
+                        }
+
+                        .button.disabled {
+                            box-shadow: none;
+                            opacity: 0.7;
+                        }
+
+                        canvas {
+                            display: block;
+                        }
+                    </style>
+                    <p><small>Francium Voice - Created By <a href='http://subinsb.com'>Subin Siby</a> & Open Source
+                            community</small></p>
+
+                </div>
+                <div class="row upload" id="upload">
+                    <h4 id="song">Upload Recorded File</h4>
+                    <hr />
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input id="musicFileInput" type="file" accept=".wav,.mp3">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                        <button class="btn waves-effect waves-light" type="submit" name="action"
+                            id="musicFileSubmit">Submit
+                            <i class="material-icons right">audiotrack</i>
+                        </button>
+                    </form>
+                </div>
+                <br />
                 <div class="row music" id="musicInfoHolder">
                     <h4 id="song">Song Title</h4>
                     <hr />
@@ -159,7 +234,7 @@
                             nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac
                             facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Nulla vitae
                             elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                       
+
                     </div>
                     <div class="col s12 m6">
                         <img id="albumArt" class="materialboxed" width="350"
@@ -190,9 +265,15 @@
     <script src="assets/js/ajaxTranslator.js"></script>
     <script src="assets/musicapp.js"></script>
     <script src="assets/js/recorder.js"></script>
+<<<<<<< HEAD
 		<script src="assets/js/Fr.voice.js"></script>
         <script src="assets/js/recorderApp.js"></script>
-       <!-- <script src="assets/js/rlibmp3lame.min.js"></script>
+        <script src="assets/js/rlibmp3lame.min.js"></script>
+=======
+    <script src="assets/js/Fr.voice.js"></script>
+    <script src="assets/js/recorderApp.js"></script>
+    <script src="assets/js/rlibmp3lame.min.js"></script>
+>>>>>>> 72c8cf061c710243cf12805eb56650c5d192368d
 </body>
 
 </html>
