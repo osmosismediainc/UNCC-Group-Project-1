@@ -42,20 +42,5 @@ $(document).ready(function () {
       $("#musicInfoHolder").append(artistLyrics, artistTitle, artistName);
 
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   });
 });
