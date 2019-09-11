@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 </html>
 
 <head>
@@ -36,74 +37,76 @@
         </div>
     </nav>
     <div class="container">
-            <div class="row marginTop">
-                    <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn modal-trigger orange accent-2" href="#modal1">Instructions</a>
-      
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Lyric Search Instructions</h4>
-            <p>Add your lyrics search to the text box. Audd.io will show you the song your lyrics relate to.</p>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's Do It!</a>
-          </div>
+        <div class="row marginTop">
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger orange accent-2" href="#modal1">Instructions</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Lyric Search Instructions</h4>
+                    <p>Add your lyrics search to the text box. Audd.io will show you the song your lyrics relate to.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's Do It!</a>
+                </div>
+            </div>
+
         </div>
-                
-              </div>
         <div class="row">
             <div class="row music" id="musicResults">
                 <div class="row upload" id="upload">
                     <h4 id="song">Search By Lyrics</h4>
                     <hr />
                     <form action="#">
-                            <div class="row">
-                                    <form class="col s12">
-                                      <div class="row">
-                                        <div class="input-field col s12">
-                                          <textarea id="lyricSearch" class="materialize-textarea" data-length="120"></textarea>
-                                          <label for="lyricSearchLabel">Lyric Search</label>
-                                        </div>
-                                      </div>
-                                    </form>
-                                  </div>
-                            <button class="btn waves-effect waves-light  green darken-4" type="submit" name="action" id="lyricSearchSubmit">Submit
-                                    <i class="material-icons right">audiotrack</i>
-                                  </button>
-                          </form>
-            </div>
-        </div>
-                
-                </div>
-                <br />
-                <div class="row music" id="musicInfoHolder">
-                    <h4 id="song">Song Title</h4>
-                    <hr />
-                    <div class="col s12 m6">
-                        <h5 id="artist">Artist</h5>
-                        <h5 id="album">Album</h5>
-                        <p id="lyrics">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est
-                            non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id
-                            dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit
-                            amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                            fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum
-                            at eros.</p>
-                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus,
-                            nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac
-                            facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Nulla vitae
-                            elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a class="waves-effect waves-light btn green darken-4" id="translateButton"><i class="material-icons right">language</i>Translate To Yoda</a>
-
-
-                    </div>
-                    <div class="col s12 m6">
-                        <img id="albumArt" class="materialboxed" width="350"
-                            src="https://via.placeholder.com/350x350?text=Album+Art">
-                    </div>
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="lyricSearch" class="materialize-textarea"
+                                            data-length="120"></textarea>
+                                        <label for="lyricSearchLabel">Lyric Search</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <button class="btn waves-effect waves-light  green darken-4" type="submit" name="action"
+                            id="lyricSearchSubmit">Submit
+                            <i class="material-icons right">audiotrack</i>
+                        </button>
+                    </form>
                 </div>
             </div>
+
         </div>
+
+        <br />
+        <div class="row music" id="musicInfoHolder">
+            <h4 id="song">Song Title</h4>
+            <hr />
+            <div class="col s12 m6">
+                <h5 id="artist">Artist</h5>
+                <h5 id="album">Album</h5>
+                <p id="lyrics">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est
+                    non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit
+                    amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                    fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum
+                    at eros.</p>
+                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus,
+                    nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac
+                    facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Nulla vitae
+                    elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+
+            </div>
+            <div class="col s12 m6">
+                <img id="albumArt" class="materialboxed" width="350"
+                    src="https://via.placeholder.com/350x350?text=Album+Art">
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
     <footer class="page-footer blue lighten-1">
         <div class="container">
@@ -119,8 +122,9 @@
             </div>
         </div>
     </footer>
-   <!-- <script src="assets/musicapp.js"></script>-->
-
+    <!-- <script src="assets/musicapp.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="materialize/js/materialize.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/musicapp.js"></script>
