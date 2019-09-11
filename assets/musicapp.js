@@ -28,27 +28,19 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
       console.log(response);
 
-      var result = response.data;
-     
-      var a = $("<p>").text(result[i].artist)
-      
+      var results = response.data;
 
 
-     // Constructing HTML containing the artist information
-     var artistName = $("#artist").text(response.artist);
-     var artistLyrics = $("#lyrics").text(response.lyrics);
-     var artistTitle = $("#song").text(response.title);
-     
 
+      // Constructing HTML containing the artist information
+      var artistName = $("#artist").text(response.name);
+      var artistLyrics = $("#lyrics").text(response.lyrics);
+      var artistTitle = $("#song").text(response.title);
 
       // Empty the contents of the artist-div, append the new artist content
       $("#musicInfoHolder").empty();
       $("#musicInfoHolder").append(artistLyrics, artistTitle, artistName);
 
-      
-
-
-      
     });
 
 
