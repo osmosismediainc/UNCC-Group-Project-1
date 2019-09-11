@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log("yooooo");
   // Define some variables
   var lyrics = "";
   var apiKey = "af514938d5msha11b1d9e2c8a7fcp14c174jsn02b30455c6eb"
@@ -10,10 +9,8 @@ $(document).ready(function () {
     var lyricsInput = $("#lyricSearch").val().trim();
     if (!lyricsInput == " ") {
       lyrics = lyricsInput;
-      console.log(lyrics);
+      console.log('submit click lyrics',lyrics);
     }
-
-
 
     var settings = {
       "async": true,
@@ -26,37 +23,12 @@ $(document).ready(function () {
       }
     }
     $.ajax(settings).done(function (response) {
-      console.log(response);
-
-      var results = response.data;
-
-      // Empty the contents of the artist-div, append the new artist content
-      $("#musicInfoHolder").empty();
-      $("#musicInfoHolder").append(artistLyrics, artistTitle, artistName, artistAlbum, artistArtwork);
-
+        
       // Constructing HTML containing the artist information
-      var artistName = $("#artist").text(response.name);
-      var artistLyrics = $("#lyrics").text(response.lyrics);
-      var artistTitle = $("#song").text(response.title);
-      var artistAlbum = $("#album").text(response.album);
-      var artistArtwork = $("#albumArt").text(response.artwork);
-
-
-      
+      $("#artist").text(response.result[0].artist);
+      $("#lyrics").text(response.result[0].lyrics);
+      $("#title").text(response.result[0].title);
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   });
