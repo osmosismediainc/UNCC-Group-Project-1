@@ -28,18 +28,7 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
       console.log(response);
 
-      var tBody = $("tbody");
-      var tRow = $("<tr>");
-      // Methods run on jQuery selectors return the selector they we run on
-      // This is why we can create and save a reference to a td in the same statement we update its text
-      var titleTd = $("<td>").text(response.Title);
-      var artistTd = $("<td>").text(response.Artist);
-      var lyricsTd = $("<td>").text(response.Lyrics);
-      // Append the newly created table data to the table row
-      tRow.append(titleTd, artistTd, lyricsTd);
-      // Append the table row to the table body
-      tBody.append(tRow);
-
+  
       // var results = response.data;
 
       // Empty the contents of the artist-div, append the new artist content
@@ -51,7 +40,7 @@ $(document).ready(function () {
       var artistLyrics = $("#lyrics").text(response.lyrics);
       var artistTitle = $("#song").text(response.title);
 
-
+ 
       
     });
 
